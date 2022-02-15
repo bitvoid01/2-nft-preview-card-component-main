@@ -32,6 +32,21 @@ body {
     border-radius: 10px;
 }
 
+.image-equilibrium .overlay {
+    position: absolute;
+    bottom: calc(50% - 30px);
+    width: 280px;
+    height: 270px;
+    display: none;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.image-equilibrium:hover .overlay {
+    display: block;
+    background:hsl(178, 100%, 50%);
+}
+
 .image-equilibrium > img:hover {
    color: hsl(178, 100%, 50%);
    cursor: pointer;
