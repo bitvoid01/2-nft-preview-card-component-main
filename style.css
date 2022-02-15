@@ -4,10 +4,19 @@
     padding: 0px;
 }
 
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --db-main-bg: hsl(217, 54%, 11%);
+    --db-card-bg: hsl(216, 50%, 16%);
+    --db-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
 body {
     width: 100vw;
     height: 100vh;
-    background-color: hsl(217, 54%, 11%);
+    background-color: var(--db-main-bg);
     font-family: 'Outfit', sans-serif;
     display: flex;
     flex-direction: row;
@@ -16,7 +25,7 @@ body {
 }
 
 .nft-card {
-    background-color: hsl(216, 50%, 16%);
+    background-color: var(--db-card-bg);
     width: 320px;
     height: 520px;
     border-radius: 10px;
@@ -26,13 +35,13 @@ body {
     margin: 20px;
 }
 
-.image-equilibrium > img {
+.image-container > img {
     width: 280px;
     height: 270px;
     border-radius: 10px;
 }
 
-.image-equilibrium .overlay {
+.image-container .overlay {
     position: absolute;
     bottom: calc(50% - 30px);
     width: 280px;
@@ -42,28 +51,26 @@ body {
     opacity: 0.5;
 }
 
-.image-equilibrium:hover .overlay {
-    display: block;
-    background:hsl(178, 100%, 50%);
-}
-
-.image-equilibrium > img:hover {
-   color: hsl(178, 100%, 50%);
-   cursor: pointer;
+.image-container:hover .overlay {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: var(--cyan);
 }
 
 .content > h3 {
-    color: hsl(0, 0%, 100%);
+    color: var(--white);
     margin-top: 15px;
 }
 
 .content > h3:hover, .avatar > span:last-child:hover {
-    color: hsl(178, 100%, 50%);
+    color: var(--cyan);
     cursor: pointer;
 }
 
 .content > p {
-    color: hsl(215, 51%, 70%);
+    color: var(--soft-blue);
     margin-top: 15px;
 }
 
@@ -78,11 +85,11 @@ body {
 }
 
 .eth {
-    color: hsl(178, 100%, 50%);
+    color: var(--cyan);
 }
 
 .days {
-    color: hsl(215, 51%, 70%);
+    color: var(--soft-blue);
 }
 
 .avatar {
@@ -90,7 +97,7 @@ body {
 }
 
 hr {
-    border: 0.5px solid hsl(215, 51%, 70%);
+    border: 0.5px solid var(--soft-blue);
     margin-top: 15px;
 }
 
@@ -103,16 +110,17 @@ hr {
 .avatar > img {
     width: 40px;
     height: 40px;
-    border: 2px solid hsl(215, 51%, 70%);
+    border: 2px solid var(--soft-blue);
     border-radius: 50%;
 }
 
 .avatar > span:nth-child(2) {
     margin-left: 10px;
-    color: hsl(215, 51%, 70%);
+    color: var(--soft-blue);
 }
 
 .avatar > span:last-child {
     margin-left: 5px;
-    color: hsl(0, 0%, 100%);
+    color: var(--white);
 }
+
